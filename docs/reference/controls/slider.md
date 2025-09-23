@@ -19,13 +19,13 @@ You will probably use these properties most often:
 
 ## Example
 
-In this example the slider value is displayed in the text block below, using binding to a control.
+In this example the slider value is displayed in the text block below, using a binding to a control.
 
 :::info
 To review how to bind one control to another, see the guide [here](../../guides/data-binding/binding-to-controls.md).
 :::
 
-Here the maximum and minimum values are default (0 and 100 respectively).
+Here the maximum and minimum values are default (0 and 100, respectively).
 
 ```xml
 <StackPanel Margin="20">
@@ -40,7 +40,7 @@ The slider looks like this on Windows:
 <img src={SliderScreenshot} alt="" />
 
 ## Binding to TextBox
-In this example, the slider value is bound to the text box above using binding to the control.
+In this example, the slider value is bound to the text box above using a binding to the control.
 
 ### Views
 ```xml
@@ -56,7 +56,7 @@ In this example, the slider value is bound to the text box above using binding t
 ### ViewModels
 - You can choose [ReactiveUI](../../concepts/reactiveui/index.md) or [CommunityToolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/) when creating a project.
 - The ViewModel code will change depending on which one you select.
-- It doesn't matter which you choose, but here i will only detail how to binding using ReactiveUI.
+- It doesn't matter which you choose, but here I will only detail how to create the binding using ReactiveUI.
 
 ```cs
 using ReactiveUI;
@@ -80,7 +80,7 @@ public class MainViewModel : ViewModelBase
 - using [ReactiveUI.Fody.Helpers](https://www.reactiveui.net/docs/handbook/view-models/boilerplate-code.html) NOTE: Fody.Helpers is not required (optional).
 
 :::info
-On how to add a nuget package, you can follow steps from the NuGet page or [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
+On how to add a NuGet package, you can follow steps from the NuGet page, [Visual Studio](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), or [Rider](https://www.jetbrains.com/help/rider/Using_NuGet.html) documentation.
 :::
 
 ```cs
@@ -92,8 +92,8 @@ public class MainViewModel : ViewModelBase
     [Reactive]
     public int MaxDamage { get; set; }
 ```
-- In the above configuration (i.e. when a change notification is bound between the Views and the ViewModels) can the values ​​in the view be updated seemless.
-- You can also values ​​are updated in ViewModels.:
+- In the above configuration (i.e. when a change notifications are bound between the Views and the ViewModels) the values ​​in the view can be updated seemlessly.
+- You can update the values ​​in ViewModels:
 ```cs
     public ICommand UnlimitedDamage { get; }
     public MainViewModel()
